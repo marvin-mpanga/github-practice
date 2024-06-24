@@ -19,12 +19,13 @@ public class StudentRegistration {
         }
     }
 
+    private static Student[] rejectedStudents = new Student[5];
+    private static int rejectedCount = 0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Student[] acceptedStudents = new Student[5];
-        Student[] rejectedStudents = new Student[5];
         int acceptedCount = 0;
-        int rejectedCount = 0;
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Enter details for student " + (i + 1) + ":");
@@ -58,8 +59,17 @@ public class StudentRegistration {
             }
         }
 
-        
-
         scanner.close();
+
+        // Call the function to get rejected students and print them using the Rejected class
+        Student[] rejected = getRejectedStudents();
+        Rejected.printRejectedStudents(rejected);
+    }
+
+    public static Student[] getRejectedStudents() {
+        // Return only the filled portion of the array
+        Student[] filledRejectedStudents = new Student[rejectedCount];
+        System.arraycopy(rejectedStudents, 0, filledRejectedStudents, 0, rejectedCount);
+        return filledRejectedStudents;
     }
 }
