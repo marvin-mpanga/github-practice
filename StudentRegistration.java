@@ -26,7 +26,7 @@ public class StudentRegistration {
         int acceptedCount = 0;
         int rejectedCount = 0;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Enter details for student " + (i + 1) + ":");
 
             System.out.print("First Name: ");
