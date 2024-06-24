@@ -1,7 +1,0 @@
-/**
- * Register
- */
-public class Register {
-
-    
-}
