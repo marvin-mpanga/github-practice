@@ -83,6 +83,8 @@ public class StudentRegistration {
         Student[] filledAcceptedStudents = new Student[acceptedCount];
         System.arraycopy(acceptedStudents, 0, filledAcceptedStudents, 0, rejectedCount);
         System.out.println(".....................................................");
+        System.out.println(".....................................................");
+        System.out.println(".....................................................");
         return filledAcceptedStudents;
     }
 }
